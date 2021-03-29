@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
-
+import { ChatUserProfileComponent } from './chat-app/chat-user-profile/chat-user-profile.component';
 import { ChatAppModule } from './chat-app/chat-app.module';
 import { RoutingModule } from './routing.module';
 
@@ -26,8 +26,11 @@ Amplify.configure(aws_exports);
     NavComponent,
     FooterComponent,
     HomeComponent,
+    ChatUserProfileComponent,
   ],
+
   imports: [
+
     BrowserModule,
     ChatAppModule.forRoot(),
     RoutingModule,

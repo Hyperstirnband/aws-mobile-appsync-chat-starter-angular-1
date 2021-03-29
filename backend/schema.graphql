@@ -83,6 +83,14 @@ type User {
   username: String!
   # is the user registered?
 	registered: Boolean
+  # Language user is speaking
+  languagesspeaking: String
+  # language user wants to learn
+  languagelearning: String
+  #TESTING STUFF
+  test: String
+  stuff: String
+  duck: String
 }
 
 type UserConversations {

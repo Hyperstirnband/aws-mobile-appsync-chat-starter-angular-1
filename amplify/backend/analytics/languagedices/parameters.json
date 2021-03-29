@@ -1,0 +1,21 @@
+{
+    "appName": "languagedices",
+    "roleName": "pinpointLambdaRole892c4e45",
+    "cloudformationPolicyName": "cloudformationPolicy892c4e45",
+    "cloudWatchPolicyName": "cloudWatchPolicy892c4e45",
+    "pinpointPolicyName": "pinpointPolicy892c4e45",
+    "authPolicyName": "pinpoint_amplify_892c4e45",
+    "unauthPolicyName": "pinpoint_amplify_892c4e45",
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "authRoleArn": {
+        "Fn::GetAtt": [
+            "AuthRole",
+            "Arn"
+        ]
+    }
+}

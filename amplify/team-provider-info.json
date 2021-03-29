@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-languagedices-dev-113404-authRole",
+      "UnauthRoleArn": "arn:aws:iam::290196208195:role/amplify-languagedices-dev-113404-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::290196208195:role/amplify-languagedices-dev-113404-authRole",
+      "Region": "eu-central-1",
+      "DeploymentBucketName": "amplify-languagedices-dev-113404-deployment",
+      "UnauthRoleName": "amplify-languagedices-dev-113404-unauthRole",
+      "StackName": "amplify-languagedices-dev-113404",
+      "StackId": "arn:aws:cloudformation:eu-central-1:290196208195:stack/amplify-languagedices-dev-113404/76462270-8c8c-11eb-b335-0284606048fe",
+      "AmplifyAppId": "d2vjs8lhc9ym7z"
+    },
+    "categories": {
+      "auth": {
+        "languagedicesc2a26d5c": {}
+      }
+    }
+  }
+}

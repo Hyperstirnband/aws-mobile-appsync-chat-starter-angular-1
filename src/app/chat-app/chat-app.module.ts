@@ -19,6 +19,7 @@ import { MomentAgoPipe } from './moment-ago.pipe';
 
 import { NgxPageScrollModule } from 'ngx-page-scroll';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ChatUserProfileComponent } from './chat-user-profile/chat-user-profile.component';
 
 @NgModule({
   imports: [
@@ -36,7 +37,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ChatConvoListComponent,
     ChatMessageViewComponent,
     MomentAgoPipe,
-    InfscrollDirective
+    InfscrollDirective,
+    //ChatUserProfileComponent,
   ]
 })
 export class ChatAppModule {

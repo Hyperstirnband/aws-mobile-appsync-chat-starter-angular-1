@@ -17,6 +17,8 @@ import { Analytics } from 'aws-amplify';
 
 import User from '../types/user';
 
+
+
 @Component({
   selector: 'app-chat-user-list',
   templateUrl: './chat-user-list.component.html',
@@ -29,7 +31,10 @@ export class ChatUserListComponent {
   order = 'username';
   no_user = false;
 
+
+
   @Input()
+
   set user(user) {
     this._user = user;
     if (this._user) { this.getAllUsers(); }
@@ -123,3 +128,4 @@ function createUserConvo(client, id, convoId, update = false): Promise<any> {
   };
   return client.mutate(options);
 }
+

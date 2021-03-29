@@ -1,11 +1,17 @@
-import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AmplifyService } from 'aws-amplify-angular';
 
+//Stuff for Profile Button
+import { Component, ViewChild } from '@angular/core';
+import { ChatUserProfileComponent } from '../chat-app/chat-user-profile/chat-user-profile.component';
+
+
 @Component({
   selector: 'app-nav',
-  templateUrl: './nav.component.html'
+  templateUrl: './nav.component.html',
+  styleUrls: []
 })
+
 export class NavComponent {
   isLoggedIn = false;
 
@@ -24,4 +30,10 @@ export class NavComponent {
   public signOut() {
     this.amplifyService.auth().signOut();
   }
+//Stuff for Profile Button
+  @ViewChild(ChatUserProfileComponent) modal: ChatUserProfileComponent
+    openModal() {
+    this.modal.open();
+ }
+
 }
