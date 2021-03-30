@@ -18,6 +18,29 @@
 
           <div class="text-center mb-2">
             <h4><span class="badge badge-pill" [class.badge-dark]="me?.registered" [class.badge-light]="!me || !me.registered">{{me?.username}}</span></h4>
+          <!-- edit profile-->
+          <div>
+            <button (click)="openModal1('custom-modal-1')">Open Modal 1</button>
+
+          </div>
+
+          <jw-modal id="custom-modal-1">
+            <h1>A Custom Modal!</h1>
+            <p>
+
+              bububub
+              {{me.username}}
+
+
+              <div class="text-center mb-2">
+                <h4><span class="badge badge-pill"></span></h4>
+              </div>
+
+
+            <button (click)="closeModal1('custom-modal-1');">Close</button>
+          </jw-modal>
+
+
           </div>
           <app-chat-user-list [user]="me" (onNewConvo)="setNewConvo($event)" pageScroll href="#chat"></app-chat-user-list>
           <app-chat-convo-list [user]="me" [current]="conversation" (onConvoClick)="setNewConvo($event)" pageScroll href="#chat"></app-chat-convo-list>

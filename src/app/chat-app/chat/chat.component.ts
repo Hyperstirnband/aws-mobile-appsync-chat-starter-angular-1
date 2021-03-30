@@ -14,6 +14,9 @@ import createUser from '../graphql/mutations/createUser';
 
 import { Auth } from 'aws-amplify';
 
+//----Stuff for User Profile
+import {ModalService} from './app/_services/modal.service';
+
 
 @Component({
   selector: 'app-chat',
@@ -31,7 +34,8 @@ export class ChatComponent implements OnInit {
 
   constructor(
     private swUpdate: SwUpdate,
-    private appsync: AppsyncService
+    private appsync: AppsyncService,
+    private modalService: ModalService
   ) {
     PageScrollConfig.defaultDuration = 400;
   }
@@ -118,4 +122,16 @@ export class ChatComponent implements OnInit {
     }).catch(err => { console.error(err); });
     this.update = false;
   }
+
+// Stuff for Profile editing
+
+
+ openModal1 (id: string) {
+   this.modalService.open (id);
+ }
+ closeModal1 (id: string) {
+   this.modalService.close (id);
+ }
+
+
 }
