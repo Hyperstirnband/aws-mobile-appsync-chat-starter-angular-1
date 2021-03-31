@@ -15,7 +15,7 @@ import createUser from '../graphql/mutations/createUser';
 import { Auth } from 'aws-amplify';
 
 //----Stuff for User Profile
-import {ModalService} from './app/_services/modal.service';
+import {ModalService} from '../../_services/modal.service';
 
 
 @Component({
@@ -126,10 +126,10 @@ export class ChatComponent implements OnInit {
 // Stuff for Profile editing
 
 
- openModal1 (id: string) {
+ openModal (id: string) {
    this.modalService.open (id);
  }
- closeModal1 (id: string) {
+ closeModal (id: string) {
    this.modalService.close (id);
  }
 

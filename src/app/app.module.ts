@@ -28,7 +28,7 @@ Amplify.configure(aws_exports);
     FooterComponent,
     HomeComponent,
     ChatUserProfileComponent,
-    ModalComponent,
+    //ModalComponent,
   ],
 
   imports: [

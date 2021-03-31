@@ -17,28 +17,16 @@
         <div class="left-pane bg">
 
           <div class="text-center mb-2">
-            <h4><span class="badge badge-pill" [class.badge-dark]="me?.registered" [class.badge-light]="!me || !me.registered">{{me?.username}}</span></h4>
-          <!-- edit profile-->
+            <h4>
+
+              <span class="badge badge-pill" [class.badge-dark]="me?.registered" [class.badge-light]="!me || !me.registered">{{me?.username}}</span></h4>
+
+              <!-- edit profile-->
           <div>
-            <button (click)="openModal1('custom-modal-1')">Open Modal 1</button>
+            <button (click)="openModal('custom-modal-1')">Languages</button>
 
           </div>
 
-          <jw-modal id="custom-modal-1">
-            <h1>A Custom Modal!</h1>
-            <p>
-
-              bububub
-              {{me.username}}
-
-
-              <div class="text-center mb-2">
-                <h4><span class="badge badge-pill"></span></h4>
-              </div>
-
-
-            <button (click)="closeModal1('custom-modal-1');">Close</button>
-          </jw-modal>
 
 
           </div>
@@ -63,3 +51,20 @@
     <p class= "p-5 m-5 h5 text-white instructions-text">Welcome, <strong>{{me?.username}}</strong>! Select a User or a Conversation to start or continue a ChatQL</p>
   </div>
 </ng-template>
+
+ <!--Pop Up to edit Profile as Modal-->
+
+ <jw-modal id="custom-modal-1">
+  <h1>A Custom Modal!</h1>
+  <p>
+    User: {{me.username}}
+    <h4>RETRIEVED FROM DATABASE!!!</h4>
+
+
+    <div class="text-center mb-2">
+      <h4><span class="badge badge-pill"></span></h4>
+    </div>
+
+
+  <button (click)="closeModal('custom-modal-1');">Close</button>
+</jw-modal>
